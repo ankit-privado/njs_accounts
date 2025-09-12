@@ -10,7 +10,7 @@ jobs:
       PRIVADO_API_ID: "de0384e0-0e0d-466f-b7f9-fec67972758e"
       PRIVADO_API_HOST: "https://t.api.code.privado.ai/test"
       PRIVADO_CI_PLATFORM: "GITHUB_ACTIONS"
-      PRIVADO_DOCKER_IMAGE: 638117407428.dkr.ecr.ap-south-1.amazonaws.com/scanner-agent:jdk25
+      PRIVADO_DOCKER_IMAGE: 638117407428.dkr.ecr.ap-south-1.amazonaws.com/scanner-agent:corretto-dockerless
       PRIVADO_REPOSITORY_ID: ${{ github.repository_id }}
       PRIVADO_REPOSITORY_NAME: ${{ github.repository }}
       PRIVADO_COMMIT_ID: ${{ github.sha }}
