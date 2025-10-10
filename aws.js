@@ -17,3 +17,14 @@ boto3.upload_file(
    Bucket = "mera-bucket",
    Key = "key"
 )
+
+const Analytics = require('analytics-node');
+
+// Initialize the Analytics client
+const analytics = new Analytics('YOUR_WRITE_KEY'); // Replace with your actual write key
+
+// Send an identify call
+analytics.identify({
+  userId: pii.adId,        // Equivalent of pii.getAdId()
+  traits: parameters       // Object of traits
+});
