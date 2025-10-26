@@ -20,9 +20,14 @@ jobs:
       - name: Create an incremental tag
         id: generate-tag
         run: |
-          latest_tag=$(gh api repos/$OWNER/$REPO/tags --jq '.[0].name')
+          latest_tag=$(gh api repos/$OWNER/$REPO/tags --jq '.[0].name // "v0.0.0"')
           
-          new_tag=$(echo $latest_tag | awk -F. '{print $1"."$2"."$3+1}')
+          # Remove 'v' prefix if present for version calculation
+          version_number=$(echo $latest_tag | sed 's/^v//')
+          
+          # Increment patch version
+          new_version=$(echo $version_number | awk -F. '{print $1"."$2"."($3+1)}')
+          new_tag="v$new_version"
           
           latest_commit_sha=$(gh api repos/$OWNER/$REPO/git/refs/heads/$BRANCH --jq '.object.sha')
           
