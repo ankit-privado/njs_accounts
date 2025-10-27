@@ -9,7 +9,7 @@ permissions:
   pull-requests: read
 
 jobs:
-  auto_release:
+  auto_release: 
     env:
       OWNER: "ankit-privado"
       BRANCH: "main"
