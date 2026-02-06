@@ -35,4 +35,4 @@ await s3.send(
   })
 );
 
-console.log("✓ Test PII uploaded (encrypted)");
+console.log("✓ all Test PII uploaded (encrypted)");
