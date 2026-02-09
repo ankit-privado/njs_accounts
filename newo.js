@@ -8,7 +8,7 @@ const KMS_KEY_ID = "arn:aws:kms:us-east-1:123456789:key/test-key";
 /* Dummy PII (TEST ONLY) */
 const piiData = {
   mnemonic: "John",
-  language: "Doe"
+  language: "ankit"
 };
 
 const body = Buffer.from(JSON.stringify(piiData, null, 2));
