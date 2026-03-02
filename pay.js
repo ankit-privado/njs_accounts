@@ -20,5 +20,33 @@ const customer = {
   }
 };
 
+const employee = {
+  employeeId: "EMP-10234",
+  fullName: "Neha Verma",
+  workEmail: "neha.verma@company.com",
+  personalEmail: "nehav123@gmail.com",
+  emergencyContact: {
+    name: "Raj Verma",
+    relation: "Father",
+    phone: "+91-9123456780"
+  },
+  salaryDetails: {
+    annualSalary: 1200000,
+    taxId: "TAX-IND-998877",
+    panNumber: "ABCDE1234F"
+  },
+  education: {
+    university: "Delhi University",
+    degree: "B.Tech",
+    graduationYear: 2018,
+    studentId: "DU-556677"
+  },
+  digitalAccounts: {
+    linkedin: "https://linkedin.com/in/nehaverma",
+    github: "https://github.com/nehaverma",
+    lastLoginIp: "10.0.0.5"
+  }
+};
+
 console.log("Customer Sensitive Data:");
 console.log(customer);
